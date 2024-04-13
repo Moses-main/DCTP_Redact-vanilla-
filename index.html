@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <!-- <a href="#" class="logo">Logo</a> -->
+      <div id="navbar-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div class="container">
+      <h1>Redact Text</h1>
+      <form id="redact-form">
+        <div class="form-group">
+          <label for="text">Text to Redact:</label>
+          <textarea
+            name="text"
+            id="text"
+            rows="8"
+            placeholder="Enter text to redact"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="words">Words to Redact:</label>
+          <input
+            type="text"
+            name="words"
+            id="words"
+            placeholder="Words to redact (separated by space)"
+          />
+        </div>
+        <div class="form-group">
+          <label for="replacement">Replacement Character/Word:</label>
+          <input
+            type="text"
+            name="replacement"
+            id="replacement"
+            placeholder="Enter replacement character/word"
+          />
+        </div>
+        <button type="button" onclick="redactText()" class="button">
+          Redact Now
+        </button>
+      </form>
+      <div id="result-container" class="result-container"></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
