@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Navigation Bar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
+
     <!-- <link rel="manifest" href="c:\Users\moses\OneDrive\Desktop\CS50\pwa_template\Postman.lnk" />  <link rel="stylesheet" href="styles.css" /> -->
   </head>
   <body>
@@ -55,8 +60,25 @@
         </button>
       </form>
       <div id="result-container" class="result-container"></div>
-    </div>
+      <!-- </div> -->
 
+      <!-- The result container -->
+      <div id="result-container" class="result-container">
+        <!-- Results will be displayed here -->
+        <div id="share-buttons">
+          <!-- Share buttons for social media -->
+          <button id="facebook-share-button" class="share-button">
+            <i class="fab fa-facebook"></i> Share on Facebook
+          </button>
+          <button id="twitter-share-button" class="share-button">
+            <i class="fab fa-twitter"></i> Share on Twitter
+          </button>
+          <button id="linkedin-share-button" class="share-button">
+            <i class="fab fa-linkedin"></i> Share on LinkedIn
+          </button>
+        </div>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>

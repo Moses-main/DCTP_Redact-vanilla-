@@ -135,6 +135,15 @@ document.addEventListener("DOMContentLoaded", function () {
         "<p><strong>Changed To:</strong> " +
         result.changedTo.join(", ") +
         "</p>";
+      // if (result.changedWords.length > 0) {
+      //   resultContainer.innerHTML +=
+      //     "<p><strong>Changed Words:</strong> " +
+      //     result.changedWords.join(", ") +
+      //     "</p>";
+      //   resultContainer.innerHTML +=
+      //     "<p><strong>Changed To:</strong> " +
+      //     result.changedTo.join(", ") +
+      //     "</p>";
     } else {
       resultContainer.innerHTML += "<p>No words were changed.</p>";
     }
@@ -162,5 +171,41 @@ document.addEventListener("DOMContentLoaded", function () {
       // Display time taken to process the text
       document.getElementById("time-taken").textContent =
         "Time taken: " + elapsedTime + " seconds";
+    });
+
+  // / Share on Facebook
+  document
+    .getElementById("facebook-share-button")
+    .addEventListener("click", function () {
+      var textToShare = document.getElementById("result-container").innerText;
+      window.open(
+        "https://www.facebook.com/sharer/sharer.php?u=" +
+          encodeURIComponent(textToShare),
+        "_blank"
+      );
+    });
+
+  // Share on Twitter
+  document
+    .getElementById("twitter-share-button")
+    .addEventListener("click", function () {
+      var textToShare = document.getElementById("result-container").innerText;
+      window.open(
+        "https://twitter.com/intent/tweet?text=" +
+          encodeURIComponent(textToShare),
+        "_blank"
+      );
+    });
+
+  // Share on LinkedIn
+  document
+    .getElementById("linkedin-share-button")
+    .addEventListener("click", function () {
+      var textToShare = document.getElementById("result-container").innerText;
+      window.open(
+        "https://www.linkedin.com/sharing/share-offsite/?url=" +
+          encodeURIComponent(textToShare),
+        "_blank"
+      );
     });
 });
